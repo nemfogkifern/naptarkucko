@@ -1,0 +1,154 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333; /* Sötétebb háttérszín */
+    color: #ccc; /* Világosabb szövegszín a kontraszt érdekében */
+}
+
+header {
+    background-color: #444; /* Sötétebb fejléct */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav {
+    background-color: #555; /* Sötétebb navigációs sáv */
+    overflow: hidden;
+    text-align: center;
+}
+
+nav a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+nav a:hover {
+    background-color: #666; /* Még sötétebb háttérszín hover esetén */
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+    background-color: #444; /* Sötétebb fő tartalom */
+    margin: 20px;
+    text-align: center;
+}
+main .calendars {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    
+}
+
+footer {
+    background-color: #222; /* Sötétebb lábléc */
+    color: white;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+footer .social-media {
+    margin: 10px 0;
+}
+
+footer .social-media a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-media img {
+    width: 24px;
+    height: 24px;
+}
+
+.calendar-item {
+    border: 1px solid #666; /* Sötétebb határvonal */
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #555; /* Sötétebb hátterű elem */
+    width: 40%;
+}
+
+.calendar-item img {
+    max-width: 100%;
+    width: 30%;
+    height: auto;
+}
+
+/* Reszponzív stílusok */
+@media (max-width: 768px) {
+    nav {
+        padding: 5px;
+    }
+
+    nav a {
+        margin: 0 10px;
+    }
+
+    main {
+        margin: 10px;
+        padding: 10px;
+    }
+
+    .calendar-item {
+        margin: 5px;
+        padding: 5px;
+    }
+
+    footer {
+        padding: 10px;
+    }
+
+    footer .social-media a {
+        margin: 0 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    nav a {
+        display: block;
+        margin: 5px 0;
+    }
+
+    footer p {
+        font-size: 0.9em;
+    }
+
+    footer .social-media {
+        margin: 5px 0;
+    }
+
+    footer .social-media a {
+        margin: 0 5px;
+    }
+
+    .calendar-item h3 {
+        font-size: 1.2em;
+    }
+
+    .calendar-item p {
+        font-size: 0.9em;
+    }
+}
