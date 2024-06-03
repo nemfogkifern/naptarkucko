@@ -1,154 +1,217 @@
+* {
+    box-sizing: border-box;
+}
+html {
+    padding: 0px;
+    margin: 0px;
+    background-color: white;
+}
 body {
-    font-family: Arial, sans-serif;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Betutipusok */
+.pacifico {
+    font-family: "Pacifico", cursive;
+    font-weight: 4000;
+    font-style: normal;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    font-size: 25px;
     margin: 0;
     padding: 0;
-    background-color: #333; /* Sötétebb háttérszín */
-    color: #ccc; /* Világosabb szövegszín a kontraszt érdekében */
+    background-color: #ffe8bf;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: solid black 2px;
 }
 
-header {
-    background-color: #444; /* Sötétebb fejléct */
-    color: white;
-    padding: 20px;
-    text-align: center;
-}
 
+
+/* Menu */
 nav {
-    background-color: #555; /* Sötétebb navigációs sáv */
-    overflow: hidden;
-    text-align: center;
-}
-
-nav a {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 20px;
-    text-decoration: none;
-    font-size: 17px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-nav a:hover {
-    background-color: #666; /* Még sötétebb háttérszín hover esetén */
-    color: #fff;
-}
-
-main {
-    padding: 20px;
-    background-color: #444; /* Sötétebb fő tartalom */
-    margin: 20px;
-    text-align: center;
-}
-main .calendars {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
-    
-}
-
-footer {
-    background-color: #222; /* Sötétebb lábléc */
-    color: white;
-    text-align: center;
-    padding: 20px 10px;
-    position: relative;
-    width: 100%;
-}
-
-footer p {
-    margin: 5px 0;
-}
-
-footer .social-media {
-    margin: 10px 0;
-}
-
-footer .social-media a {
-    margin: 0 10px;
-    display: inline-block;
-}
-
-footer .social-media img {
-    width: 24px;
-    height: 24px;
-}
-
-.calendar-item {
-    border: 1px solid #666; /* Sötétebb határvonal */
-    margin: 10px;
     padding: 10px;
+    margin-bottom: 60px;
+}
+nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+nav ul li {
+    padding: 10px 30px;
     text-align: center;
-    background-color: #555; /* Sötétebb hátterű elem */
-    width: 40%;
+}
+nav li a {
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 500;
+    font-size: 30px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    position: relative;
 }
 
-.calendar-item img {
-    max-width: 100%;
-    width: 30%;
+nav li a#active {
+    font-weight: 700;
+}
+
+
+/* Underline animation */
+nav li a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    display: block;
+    margin-top: 0px;
+    left: 50%;
+    background: black;
+    transition: width 0.3s ease, left 0.3s ease;
+    -webkit-transition: width 0.3s ease, left 0.3s ease;
+}
+nav li a:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+
+
+
+
+
+
+/* Main */
+div.main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+article {
+    background-color: #ffe8bf;
+    width: 98%;
+    margin: 1%;
+    font-size: 25px;
+    border: solid 2px black;
+    border-radius: 20px;
+    text-align: center;
+    padding: 1%;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 400;
+}
+article#vasarlas{
+    width: 98%;
+    background-color: #ffc86a;
+
+}
+article#nyitvatartas{
+    width: 98%;
+    background-color: #cfc6b0;
+
+}
+article#velemeny{
+    width: 98%;
+}
+#lat{
+    margin: 40px;
+    font-size: 30px;
+    text-align: center;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 600;
+}
+
+.kep {
+    
+    margin: 20px;
+    width: 60%;
     height: auto;
+    border: solid black 2px;
+    border-radius: 30px;
 }
 
-/* Reszponzív stílusok */
-@media (max-width: 768px) {
-    nav {
-        padding: 5px;
-    }
 
-    nav a {
-        margin: 0 10px;
-    }
 
-    main {
-        margin: 10px;
-        padding: 10px;
-    }
-
-    .calendar-item {
-        margin: 5px;
-        padding: 5px;
-    }
-
-    footer {
-        padding: 10px;
-    }
-
-    footer .social-media a {
-        margin: 0 5px;
-    }
+article a{
+    color: rgb(0, 0, 141);
+    text-decoration: none;
+}
+article a:hover{
+    text-shadow: 0 0 3px #b81919;  
 }
 
-@media (max-width: 480px) {
-    header h1 {
-        font-size: 1.5em;
-    }
+#kiemeles {
+    font-size: 28px;
+    font-style: italic;
+    font-weight: bold;
+}
 
-    header p {
-        font-size: 1em;
-    }
+/* Lablec */
+footer{
+    margin-top: 10px;
+    font-family: "Love Ya Like A Sister", cursive;
+    font-weight: 700;
+    font-size: 20px;
+    text-align:center;
+    padding: 10px;
+    background-color: rgba(180, 180, 180, 0.612);
+    border-top: 1px black solid;
 
-    nav a {
-        display: block;
-        margin: 5px 0;
-    }
+}
 
-    footer p {
-        font-size: 0.9em;
-    }
+.social {
+    size: 5%;
+    width: 2%;
+    margin: 10px;
+}
+footer a {
+    text-decoration: none;
+}
 
-    footer .social-media {
-        margin: 5px 0;
-    }
+footer a :hover{
+    transition: transform 0.2s ease;
 
-    footer .social-media a {
-        margin: 0 5px;
-    }
+    transform: scale(1.2);
+}
 
-    .calendar-item h3 {
-        font-size: 1.2em;
-    }
+/* Reszponzivitas */
 
-    .calendar-item p {
-        font-size: 0.9em;
+
+@media all and (min-width: 768px) {
+    nav ul {
+        flex-direction: row;
+        align-items: center;
+
+    }
+    div.main{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    article{
+        width: 60%;
+    }
+    article#vasarlas{
+        width: 60%;
+    }
+    article#nyitvatartas{
+        width: 30%;
+    }
+    article#velemeny{
+        width: 30%;
+    }
+    .kep {
+        width: 30%;
     }
 }

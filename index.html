@@ -3,72 +3,77 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Naptárkuckó - Naptárak minden alkalomra</title>
+    <title>Naptárkuckó</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" href="images/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto+Condensed:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Cookie&family=Love+Ya+Like+A+Sister&family=Sevillana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=Cookie&family=Delius+Swash+Caps&family=Love+Ya+Like+A+Sister&family=Sevillana&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header>
-        <h1>Naptárkuckó</h1>
-        <p>Naptárak minden alkalomra</p>
+        <h1 class="pacifico">Naptárkuckó</h1>
     </header>
     <nav>
-        <a href="#">Főoldal</a>
-        <a href="#">Naptárak</a>
-        <a href="#">Rólunk</a>
-        <a href="#">Kapcsolat</a>
+        <ul>
+            <li><a href="index.html" id="active">Főoldal</a></li>
+            <li><a href="naptarak.html">Naptárak</a></li>
+            <li><a href="rolunk.html">Rólunk</a></li>
+            <li><a href="kapcsolat.html">Kapcsolat</a></li>
+        </ul>
     </nav>
-    <main>
-        <h2>Üdvözöljük a Naptárkuckóban!</h2>
-        <p>Válogasson széles kínálatunkból és találja meg az Önnek legmegfelelőbb naptárat!</p>
-        <div class="calendars">
-            <div class="calendar-item">
-                <h3>2024-es Fali Naptár</h3>
-                <img src="images/egyedi_naptar1.png" alt="2024-es Fali Naptár">
-                <p>Ár: 2500 Ft</p>
-            </div>
-            <div class="calendar-item">
-                <h3>2024-es Asztali Naptár</h3>
-                <img src="images/atl_falinaptar.jpg" alt="2024-es Asztali Naptár">
-                <p>Ár: 1500 Ft</p>
-            </div>
-            <div class="calendar-item">
-                <h3>2024-es Egyedi Fotós Naptár</h3>
-                <img src="calendar3.jpg" alt="2024-es Egyedi Fotós Naptár">
-                <p>Ár: 3000 Ft</p>
-            </div>
-            <div class="calendar-item">
-                <h3>2024-es Falvédős Naptár</h3>
-                <img src="calendar4.jpg" alt="2024-es Falvédős Naptár">
-                <p>Ár: 2800 Ft</p>
-            </div>
-            <div class="calendar-item">
-                <h3>2024-es Művészeti Naptár</h3>
-                <img src="calendar5.jpg" alt="2024-es Művészeti Naptár">
-                <p>Ár: 2700 Ft</p>
-            </div>
-            <div class="calendar-item">
-                <h3>2024-es Vintage Naptár</h3>
-                <img src="calendar6.jpg" alt="2024-es Vintage Naptár">
-                <p>Ár: 2600 Ft</p>
-            </div>
-        </div>
-    </main>
+    <div class="main">
+        <article>
+            <h2>Üdvözöljük a Naptárkuckóban!</h2>
+            <p>Üdvözöljük a Naptárkuckó weboldalán! Cégünk, a Naptárkuckó, egy kis budapesti vállalkozás, amely kizárólag falinaptárak készítésével foglalkozik. Legyen szó egyedi rendelésekről vagy általános naptárakról, nálunk biztosan megtalálja, amit keres. 
+            </p>    
+            <p>Helyi üzletünkben nagy gonddal és odafigyeléssel készítjük el a naptárakat, ügyelve minden apró részletre. A Veres Pálné utcában található kis műhelyünkben családias hangulatban várjuk vásárlóinkat. 
+            </p>
+            <p>Kis csapatunkkal arra törekszünk, hogy minden ügyfél elégedetten távozzon tőlünk, legyen szó akár egy egyszerű naptárról, akár egy teljesen egyedi tervezésű darabról. Fontos számunkra, hogy termékeinkkel örömet és hasznosságot hozzunk mindennapjaikba.</p>
+
+            <a href="rolunk.html">- További információk rólunk -</a>
+        </article>
+        <img class="kep" src="images/animal.jpg" alt="allat">
+        
+        <article id="nyitvatartas">
+            <h2>Nyitvatartás</h2>
+            <p>
+                <ul>
+                    <li>Hétfő-Péntek: 09:00 - 18:00</li>
+                    <li>Szombat: 10:00 - 14:00</li>
+                    <li>Vasárnap: Zárva</li>
+                </ul>
+            </p>
+        </article>
+        <article id="vasarlas">
+            <h2>Vásárlás</h2>
+            <p>Naptárainkat megvásárolhatja közvetlenül üzletünkben a Veres Pálné utca 33 szám alatt, vagy rendelhet online a weboldalunkon keresztül. Online felületünkön könnyen áttekinthető a kínálatunk, és egyszerűen leadhatja rendelését.</p>
+            <a href="naptarak.html">- Termékeink -</a>
+
+        </article>
+
+        <p id="lat">Látogasson el hozzánk, és fedezze fel a Naptárkuckó különleges kínálatát!</p>
+    </div>
     <footer>
         <p>Telefon: +36 1 234 5678</p>
         <p>Email: info@naptarkucko.hu</p>
-        <div class="social-media">
+        <div>
             <a href="https://facebook.com/naptarkucko" target="_blank">
-                <img src="images/facebook.png" alt="Facebook">
+                <img class="social" src="images/facebook.png" alt="Facebook">
             </a>
             <a href="https://instagram.com/naptarkucko" target="_blank">
-                <img src="images/instagram.png" alt="Instagram">
+                <img class="social" src="images/instagram.png" alt="Instagram">
             </a>
             <a href="https://twitter.com/naptarkucko" target="_blank">
-                <img src="images/twitter.png" alt="Twitter">
+                <img class="social" src="images/twitter.png" alt="Twitter">
             </a>
         </div>
         <p>&copy; 2024 Naptárkuckó. Minden jog fenntartva.</p>
+        <p> Az oldal nem reprezentál valós vállalatot és kizárólag oktatási célokat szolgál</p>
     </footer>
 </body>
 </html>
