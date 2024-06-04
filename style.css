@@ -131,6 +131,74 @@ article#velemeny{
     font-weight: 600;
 }
 
+.naptar-item {
+    background-color: #dbffbf;
+}
+
+.cim {
+    width: 100%;
+    font-family: "Delius Swash Caps", cursive;
+    font-weight: 700;
+    text-align: center;
+    font-size: 40px;
+}
+
+/* kicseszett nehez underline animation amit jobb ha összecsukva tartunk és elfelejtjuk h valaha létezett*/
+.cta {
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: "Delius Swash Caps", cursive;
+    margin-bottom: 25px;
+  }
+  
+  .cta span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+  }
+  
+  .cta svg {
+    transform: translateX(-8px);
+    transition: all 0.3s ease;
+  }
+  
+  .cta:hover svg {
+    transform: translateX(0);
+  }
+  
+  .cta:active svg {
+    transform: scale(0.9);
+  }
+  
+  .hover-underline-animation {
+    position: relative;
+    color: black;
+    padding-bottom: 20px;
+  }
+  
+  .hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .cta:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }
+  /* kicseszett nehez underlinne animation vege hala istennek */
+
 .kep {
     
     margin: 20px;
@@ -138,6 +206,13 @@ article#velemeny{
     height: auto;
     border: solid black 2px;
     border-radius: 30px;
+}
+.naptar-kep {
+    width: 100%;
+}
+article img:hover{
+    transform: scale(1.05);
+    transition: transform 0.2s ease;
 }
 
 
@@ -156,6 +231,100 @@ article a:hover{
     font-weight: bold;
 }
 
+article.kapcsolat{
+    background-color: white;
+    border: none;
+}
+
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-form label {
+    margin: 10px 0 5px;
+}
+.contact-form input, .contact-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+.contact-form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+.cssbuttons-io-button {
+    background: #a370f0;
+    color: white;
+    font-family: inherit;
+    padding: 0.35em;
+    padding-left: 1.2em;
+    font-size: 17px;
+    font-weight: 500;
+    border-radius: 0.9em;
+    border: none;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    box-shadow: inset 0 0 1.6em -0.6em #714da6;
+    overflow: hidden;
+    position: relative;
+    height: 2.8em;
+    padding-right: 3.3em;
+    cursor: pointer;
+    width: 15%;
+  }
+  
+  .cssbuttons-io-button .icon {
+    background: white;
+    margin-left: 1em;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2.2em;
+    width: 2.2em;
+    border-radius: 0.7em;
+    box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+    right: 0.3em;
+    transition: all 0.3s;
+  }
+  
+  .cssbuttons-io-button:hover .icon {
+    width: calc(100% - 0.6em);
+  }
+  
+  .cssbuttons-io-button .icon svg {
+    width: 1.1em;
+    transition: transform 0.3s;
+    color: #7b52b9;
+  }
+  
+  .cssbuttons-io-button:hover .icon svg {
+    transform: translateX(0.1em);
+  }
+  
+  .cssbuttons-io-button:active .icon {
+    transform: scale(0.95);
+  }
+
+.lista-jel {
+    list-style-type: none;
+}
+
 /* Lablec */
 footer{
     margin-top: 10px;
@@ -170,8 +339,7 @@ footer{
 }
 
 .social {
-    size: 5%;
-    width: 2%;
+    width: 10%;
     margin: 10px;
 }
 footer a {
@@ -187,7 +355,7 @@ footer a :hover{
 /* Reszponzivitas */
 
 
-@media all and (min-width: 768px) {
+@media all and (min-width: 900px) {
     nav ul {
         flex-direction: row;
         align-items: center;
@@ -198,6 +366,7 @@ footer a :hover{
         flex-direction: row;
         justify-content: center;
         flex-wrap: wrap;
+        align-items: stretch;
     }
     article{
         width: 60%;
@@ -211,7 +380,32 @@ footer a :hover{
     article#velemeny{
         width: 30%;
     }
+    article.naptar-item{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 30%;
+        flex: 1;
+    }
+    
+    
+    
+
     .kep {
         width: 30%;
+
+    }
+
+   
+
+
+
+    .social {
+        width: 3%;
+    }
+    .naptar-kep {
+        width: 60%;
+
     }
 }
